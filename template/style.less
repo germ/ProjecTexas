@@ -1,0 +1,113 @@
+//Vim tip: set foldmethod=indent
+
+//Colorscheme 
+@baseColorscheme: @colorAmber;
+
+@colorAmber:    #d14014;
+@colorGreen:    #41FF00;
+
+//Colorschemedesigner.com seed : #ADBEF4
+@bg1:		#B1B1B1; //dark grey
+@bg2:		#ececec; //grey
+@highlight: #ad235e; //red
+@pale:		#dfeff0; //pale blue
+@medium:	#bdd8da; //medium blue
+@dark:		#00545d; //dark blue
+
+@leftWidth:		25%;
+@rightWidth:	72%;
+@leftMargin:	1%;
+@centerMargin:	1%;
+@headerGap:		1%;
+@headerHeight:	100px;
+@lHeaderWidth:	20%;
+@rHeaderWidth:	77%;
+
+body {
+	background-color: 		@medium;
+	color:					@dark;
+}
+
+ul {
+	list-style-type:		none;
+}
+
+p 	{
+	padding-left:			3%;
+	padding-right:			3%;
+}
+
+h1 {
+	text-align:				right;
+	padding-left:			3%;
+	padding-right:			3%;
+	color:					@dark;
+}
+
+a {
+	color: 					black;
+	text-decoration:		none;
+}
+
+#headerLeft 	{
+	float:					left;
+	width:					@lHeaderWidth;
+	margin-left:			@leftMargin;
+	margin-bottom:			@headerGap;
+	min-height:				@headerHeight;
+	border-bottom-style:	solid;
+	border-color:			@dark;
+	border-width:			1px;
+
+	li {
+		text-align:			right;
+	}
+}
+
+#headerRight 	{
+	width: 					@rHeaderWidth;
+	margin-left:			@centerMargin;
+	margin-bottom:			@headerGap;
+	float:					right;
+	min-height:				@headerHeight;
+	border-left-style:		solid;
+	border-bottom-style:	solid;
+	border-color:			@dark;
+	border-width:			1px;
+
+	h1 {
+		text-align:			left;
+		padding-left:		5%;
+		padding-top:		auto;
+		padding-bottom:		auto;
+	}
+}
+
+#leftColumn {
+	width:					@leftWidth;
+	margin-left:			@leftMargin;
+	float:					left;
+
+	ul {
+		font-size:			0.8em;
+	}
+	img {
+		width: 				70%;
+		display:			block;
+		margin-left:		auto;
+		margin-right:		auto;
+	}
+}
+
+#rightColumn {
+	border-left-style:		solid;
+	border-left-color:		@dark;
+	border-left-width:		1px;
+	width:					@rightWidth;
+	padding-left:			1%;
+	float:					right;
+
+	h2 {
+		text-decoration:	underline;
+	}
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- Vim tip: set foldmethod=indent -->
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>Project Texas</title>
+ 	<link rel="stylesheet" type="text/css" href="static/tex.css"></link>
+</head>
+
+<body>
+	<div id="headerLeft">
+		<ul>
+			<li><a href="/">
+				Home</a></li>
+		</ul>
+		</div>
+	
+	<div id="headerRight">
+		<h1>Project Texas</h1>
+		</div>
+
+	<div id="leftColumn">
+		<p>
+        <ul>
+            {% for i in names %}
+                {{ i }}
+            {% endfor %}
+        </ul>
+		</p>
+		</div>
+
+	<div id="rightColumn">
+		<h2>About</h2>
+		<p>
+            This is a showcase of various prisoners that have been sent to death row in Texas. For each convict their crimes will be presented alongside their final statements, in addition supplementary data from the Texas Department of Criminal Justice will be displayed. Feel free to select a name from the left to begin.
+        </p>
+
+		<h2>History</h2>
+		<p>
+            I came up with the idea for these pages after finding <a href="http://www.tdcj.state.tx.us/death_row/dr_executed_offenders.html">this database</a> via <a href="http://news.ycombinator.com/">Hacker News</a>. In particular I found the dying words of convicts to be interesting, especially when contrasted against the violence of their crimes. I believed that this data should have been presented with more of a focus on this contrast and decided to showcase it here as such.
+		</p>
+
+        <h2>Technical Aspects</h2>
+        <p>
+            The data presented was scraped from the <a href="http://www.tdcj.state.tx.us/">Texas Department of Criminal Justice</a> website using scrapy and exported to JSON. After initial data collection the data was processed with a python script and "pickled" into raw text. This file was then loaded as a python dictionary using Google App Engine and parsed into the pages you see here with Django templates. If time would have permitted the hacked together pickling solution would have been replaced with a proper mysql database.
+        </p>
+
+        <h2>Dirty Hacks</h2>
+        <p>
+            As you may have noticed some of the prisoner pages have the summary missing. This is a bug in my scraper that I have not had time to fix. It will be fixed when I have some more free time. 
+        </p>
+		</div>
+
+
+</body>
+</html>

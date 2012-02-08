@@ -1,0 +1,19 @@
+Project Texas
+-=-=-=-=-=-=-
+A personal look at the prisoners of death row
+
+License
+-=-=-=-=
+Public domain unless otherwise specified
+
+Backend
+-=-=-=-
+- Scrapy Scripts to parse the data into JSON (Python)
+- Python script to concatenate data pairs into single sets
+- Google app engine scripts for serving pages and directing flow
+- Django templates for page formatting
+
+Hacks
+-=-=-
+A bit of this is quite hacked together due to time constraints. Given more time
+this will be fixed. Until then they are marked with commented with Todos

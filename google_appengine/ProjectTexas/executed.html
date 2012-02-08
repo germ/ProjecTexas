@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- Vim tip: set foldmethod=indent -->
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>Project Texas</title>
+ 	<link rel="stylesheet" type="text/css" href="static/tex.css"></link>
+</head>
+
+<body>
+	<div id="headerLeft">
+		<ul>
+			<li><a href="/">
+				Home</a></li>
+		</ul>
+		</div>
+	
+	<div id="headerRight">
+		<h1>Project Texas</h1>
+		</div>
+
+	<div id="leftColumn">
+		<p>
+            {% if mugshot %}
+			    <img alt="mugshot" src="{{mugshot}}"></img>
+            {% else %}
+                <img alt="mugshot" src="/static/noshot.gif"></img>
+            {% endif %}
+
+			<ul>
+                <!-- Dirty Hack, TODO: Remove --!>
+                {% if name %}<li><b>Name: </b>{{name}}</li>{% endif %}
+                {% if TCDJ %}<li><b>TCDJ :#</b></li>{% endif %}
+
+                {% if ageRec %}<li><b>Age Received: </b>{{ageRec}}</li>{% endif %}
+                {% if ageOff %}<li><b>Age of Offense: </b>{{ageOff}}</li>{% endif %}
+                {% if age %}<li><b>Age: </b>{{age}}</li>{% endif %}
+
+                {% if offense %}<li><b>Offense: </b>{{offense}}</li>{% endif %}
+                {% if priorRec %}<li><b>Prior Record: </b>{{priorRec}}</li>{% endif %}
+                {% if priorOcc %}<li><b>Prior Occupation: </b>{{priorOcc}}</li>{% endif %}
+
+                {% if coDefends %}<li><b>Co-Defendants</b>{{coDefends}}</li>{% endif %}
+                {% if victim %}<li><b>Victim: </b>{{victim}}</li>{% endif %}
+
+                {% if race %}<li><b>Race: </b>{{race}}</li>{% endif %}
+                {% if height %}<li><b>Height: </b>{{height}}</li>{% endif %}
+                {% if weight %}<li><b>Weight: </b>{{weight}}</li>{% endif %}
+                {% if gender %}<li><b>Gender: </b>{{gender}}</li>{% endif %}
+                {% if colorHair %}<li><b>Hair Color: </b>{{colorHair}}</li>{% endif %}
+                {% if colorEye %}<li><b>Eye Color: </b>{{colorEye}}</li>{% endif %}
+
+                {% if dateBirth %} <li><b>Date Of Birth:</b> {{dateBirth}}</li>{% endif %}
+                {% if dateRec %}<li><b>Date Recieved: </b>{{dateRec}}</li>{% endif %}
+                {% if dateOff %}<li><b>Offense Date: </b>{{dateOff}}</li>{% endif %}
+
+                {% if stateNative %}<li><b>Native State: </b>{{stateNative}}</li>{% endif %}
+                {% if county %}<li><b>County: </b>{{county}}</li>{% endif %}
+                {% if countyNative %}<li><b>Native County: </b>{{countyNative}}</li>{% endif %}
+
+                {% if education %}<li><b>Education: </b>{{education}}</li>{% endif %}
+
+			</ul>
+		</p>
+		</div>
+
+	<div id="rightColumn">
+		<h2>Last Statement</h2>
+		<p>
+            {% if finalStatement %}
+                {{ finalStatement }}
+            {% else %}
+                No Statement Avalible
+            {% endif %}
+		</p>
+
+		<h2>Summary of Incident</h2>
+		<p>
+            {% if summary %}
+                {{ summary }}
+            {% else %}
+                No summary avalible
+            {% endif %}
+		</p>
+		</div>
+
+	<div id="footerLeft">
+		</div>
+
+	<div id="footerRight">
+		</div>
+</body>
+</html>
